@@ -57,4 +57,5 @@
 ## References
 [WebRTC Testing Documentation](https://webrtc.org/getting-started/testing)
 [Playwright Visual Comparison Testing](https://playwright.dev/docs/test-snapshots)
+[Playwright Fake video capture discussion](https://github.com/microsoft/playwright/issues/4532)
 [Example of Playwright Testing for video calls](https://github.com/bigbluebutton/bigbluebutton)
