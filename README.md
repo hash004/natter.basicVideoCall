@@ -1,11 +1,13 @@
 # Getting Started
 ## Installation
 1. Clone the repository
-2. Install dependencies
+1. Install dependencies
    ```bash
    npm install
    ```
-3. Run the tests using Playwright
+1. Update .env file with your details
+1. Unzip the video file, `test-video.7z` in the `assets` directory
+1. Run the tests using Playwright
    ```bash
    npm run pw:e2e
    ```
@@ -49,9 +51,11 @@
   - Check for network payload and/or console logs for codec information
 - Not sure how to test for video resolution settings
   - Check for video element dimensions or network payload for resolution information
-- Having mutliple input video sources is not possible with the --use-file-for-fake-video-capture flag in Playwright
+- Having multiple input video sources is not possible with the `--use-file-for-fake-video-capture` flag in Playwright
   - To test multiple video sources, we need to use a different approach e.g. OBS?
+  - Or https://github.com/v4l2loopback/v4l2loopback
 
 ## References
 [WebRTC Testing Documentation](https://webrtc.org/getting-started/testing)
-[BigBlueButton - Example of Playwright Testing for video calls](https://github.com/bigbluebutton/bigbluebutton)
+[Playwright Visual Comparison Testing](https://playwright.dev/docs/test-snapshots)
+[Example of Playwright Testing for video calls](https://github.com/bigbluebutton/bigbluebutton)

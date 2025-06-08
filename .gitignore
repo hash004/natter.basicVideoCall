@@ -6,4 +6,5 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 .env
-assets/
+assets/*.y4m
+assets/*.mp4

@@ -8,6 +8,15 @@ import dotenv from 'dotenv';
 import path from 'path';
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
+const launchOptions = {
+  args: [
+    '--use-fake-ui-for-media-stream', // Automatically allow camera and microphone access
+    '--use-fake-device-for-media-stream', // Use fake media devices
+    '--use-file-for-fake-video-capture=assets/test-video.y4m',
+    '--use-file-for-fake-audio-capture=assets/test-sound.wav',
+  ],
+}
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -39,14 +48,7 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        launchOptions: {
-          args: [
-            '--use-fake-ui-for-media-stream', // Automatically allow camera and microphone access
-            '--use-fake-device-for-media-stream', // Use fake media devices
-            '--use-file-for-fake-video-capture=assets/test-video.y4m',
-            '--use-file-for-fake-audio-capture=assets/test-sound.wav',
-          ],
-        },
+        launchOptions
       },
     },
     // {
@@ -64,14 +66,7 @@ export default defineConfig({
       name: 'Mobile Chrome',
       use: {
         ...devices['Pixel 7'],
-        launchOptions: {
-          args: [
-            '--use-fake-ui-for-media-stream', // Automatically allow camera and microphone access
-            '--use-fake-device-for-media-stream', // Use fake media devices
-            '--use-file-for-fake-video-capture=assets/test-video.y4m',
-            '--use-file-for-fake-audio-capture=assets/test-sound.wav',
-          ],
-        },
+        launchOptions
       },
     },
     // {

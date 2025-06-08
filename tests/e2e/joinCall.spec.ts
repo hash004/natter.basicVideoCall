@@ -209,7 +209,7 @@ test.describe('Advanced Settings', () => {
     await expect(basicVideoCallPage.microphoneInput()).toHaveValue(microphoneName);
   });
 
-  test('As a user, I can change my camera settings during a call', { tag: ['@low', '@smoke'] }, async ({ basicVideoCallPage }) => {
+  test.skip('As a user, I can change my camera settings during a call', { tag: ['@low', '@smoke'] }, async ({ basicVideoCallPage }) => {
     const cameraName = 'Fake Video Input 1';
 
     await basicVideoCallPage.joinCall(Env.APP_ID, Env.APP_TOKEN, Env.CHANNEL_NAME);
@@ -220,5 +220,16 @@ test.describe('Advanced Settings', () => {
     await basicVideoCallPage.cameraOptions(cameraName).click();
 
     await expect(basicVideoCallPage.cameraInput()).toHaveValue(cameraName);
+  });
+});
+
+test.describe('Permissions', () => {
+  test.fixme('As a user, I want to see permission denied messages when permissions are not granted', {
+    tag: ['@low', '@smoke'],
+    annotation: {
+      type: 'bug',
+      description: 'This test is currently failing due to the application not displaying permission denied messages when permissions are not granted.'
+    }
+  }, async ({ basicVideoCallPage }) => {
   });
 });
