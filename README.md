@@ -45,15 +45,14 @@
 - Congratulations message intermittently doesn't show up when joining a channel
 - Video in a call is cropped from top and bottom
   - Likely from object-fit CSS property
-- Audio is not working in a call when one user but works when two users are in a call
-- Unable to mock the microphone and camera permissions in Safari
+- Audio is not working in a call when one user but works when two users are in a call (Likely expected behaviour)
+- Unable to mock the microphone and camera permissions in Safari (Playwright limitation)
 - Not sure how to test for different codec settings
-  - Check for network payload and/or console logs for codec information
+  - Maybe check for network payload and/or console logs for codec information
 - Not sure how to test for video resolution settings
-  - Check for video element dimensions or network payload for resolution information
+  - Maybe check for video element dimensions or network payload for resolution information
 - Having multiple input video sources is not possible with the `--use-file-for-fake-video-capture` flag in Playwright
-  - To test multiple video sources, we need to use a different approach e.g. OBS?
-  - Or https://github.com/v4l2loopback/v4l2loopback
+  - To test multiple video sources, we need to use a different approach e.g. OBS or https://github.com/v4l2loopback/v4l2loopback
 
 ## References
 [WebRTC Testing Documentation](https://webrtc.org/getting-started/testing)
