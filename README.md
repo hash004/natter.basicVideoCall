@@ -26,9 +26,9 @@
 - Should Advanced Settings be visible before joining a channel (there would be no mic or cam to select)?
 - Anyway to kick users from a channel? 
   - (so we can test channel with confidence that it's empty)
-  - Visual comparison tests will fail if there are other user(s) in the channel
+  - Visual comparison tests could fail if there are other user(s) in the channel
 - How to trigger 'You can invite others join this channel by click' message?
-- Do we need to test different network conditions? Can probably use emulateNetworkConditions dev tool in Chrome.
+- Do we need to test different network conditions? Can probably use `emulateNetworkConditions` in Chrome dev tool.
 
 ## Further Improvements
 - More visual tests
